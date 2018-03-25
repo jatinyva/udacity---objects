@@ -110,3 +110,69 @@ var savingsAccount = {
     };
 
 console.log(savingsAccount.printAccountSummary());
+
+
+Create an object called facebookProfile. The object should have 3 properties:
+
+your name
+the number of friends you have, and
+an array of messages you've posted (as strings)
+The object should also have 4 methods:
+
+postMessage(message) - adds a new message string to the array
+deleteMessage(index) - removes the message corresponding to the index provided
+addFriend() - increases the friend count by 1
+removeFriend() - decreases the friend count by 1
+
+
+*
+ * Programming Quiz: Facebook Friends (7-5)
+ */
+
+// your code goes here
+var facebookProfile = { 
+    name:"Jatin",
+    friends : 100,
+    messages : ["hey","message"],
+    postMessage: function postMessage(message){
+        facebookProfile.messages.push("Fourth message");
+    },
+        deleteMessage: function deleteMessage(index) {
+        facebookProfile.messages.splice(index,1);
+  
+    },
+        addFriend: function addFriend(){
+        facebookProfile.friends += 1;
+    },    
+        removeFriend: function removeFriend(){
+        facebookProfile.friends -= 1;    
+        }
+};
+console.log(facebookProfile);
+
+
+Directions:
+Use the forEach() method to loop over the array and print out the following donut summaries using console.log.
+
+Jelly donuts cost $1.22 each
+Chocolate donuts cost $2.45 each
+Cider donuts cost $1.59 each
+Boston Cream donuts cost $5.99 each
+
+
+/*
+ * Programming Quiz: Donuts Revisited (7-6)
+ */
+
+var donuts = [
+    { type: "Jelly", cost: 1.22 },
+    { type: "Chocolate", cost: 2.45 },
+    { type: "Cider", cost: 1.59 },
+    { type: "Boston Cream", cost: 5.99 }
+];
+
+// your code goes here
+donuts.forEach(function(element) {
+  console.log(element.type + " donuts cost $" + element.cost + " each");
+});
+
